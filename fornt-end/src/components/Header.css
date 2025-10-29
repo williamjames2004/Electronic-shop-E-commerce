@@ -1,0 +1,80 @@
+.header {
+    margin-top: -20px;
+    margin-left: -20px;
+    width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  position: fixed;
+  z-index: 1000;
+  animation: fadeInDown 0.5s ease;
+}
+
+@keyframes fadeInDown {
+  0% { transform: translateY(-50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.logo {
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.user-section {
+  position: relative;
+}
+
+.user-btn {
+  background: #fff;
+  color: #4e54c8;
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.user-btn:hover {
+  background: #8f94fb;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 110%;
+  background: none;
+  border-radius: 8px;
+  overflow: hidden;
+  animation: dropdownFade 0.3s ease forwards;
+}
+
+@keyframes dropdownFade {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown button {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  text-align: justify;
+  cursor: pointer;
+}
+
+.dropdown button:hover {
+  background: #4e54c8;
+  color: #fff;
+}

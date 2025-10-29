@@ -1,0 +1,116 @@
+/* Background */
+.register-bg {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at bottom right, #141e30, #243b55);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Card */
+.register-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 2.5rem;
+  width: 400px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.register-title {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* Floating Input Group */
+.input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 10px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.input-group label {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  color: #aaa;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #00ffb3;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 5px;
+  font-size: 0.85rem;
+  color: #00ffb3;
+}
+
+/* Register Button */
+.btn-register {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(90deg, #00ffb3, #00b7ff);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-register:hover {
+  background: linear-gradient(90deg, #00b7ff, #00ffb3);
+  transform: scale(1.03);
+}
+
+/* Error Message */
+.error-msg {
+  background-color: rgba(255, 80, 80, 0.2);
+  color: #ff6060;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 8px;
+  font-size: 0.9rem;
+}
+span{
+  transition: smooth;
+}
+span:hover{
+  text-decoration: underline;
+}
