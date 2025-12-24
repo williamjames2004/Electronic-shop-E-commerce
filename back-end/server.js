@@ -4,6 +4,7 @@ const cors = require("cors");
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
 const productRoutes = require("./routes/productRoutes");
+const adminRoutes = require("./routes/adminRoutes");
 
 dotenv.config();
 const app = express();
@@ -15,6 +16,7 @@ app.use(express.json());
 app.use("/backend", authRoutes);
 app.use("/backend", productRoutes); // <--- Add this line
 app.use("/uploads", express.static("uploads"));
+app.use("/admin", adminRoutes);
 
 // DB
 connectDB();
